@@ -1,0 +1,1831 @@
+
+LCD_DS32131_buttons.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000001c  00800100  00000ae2  00000b76  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000ae2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000a  0080011c  0080011c  00000b92  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000b92  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000bc4  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000108  00000000  00000000  00000c04  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001baf  00000000  00000000  00000d0c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000a7a  00000000  00000000  000028bb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000f22  00000000  00000000  00003335  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001dc  00000000  00000000  00004258  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000060f  00000000  00000000  00004434  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000928  00000000  00000000  00004a43  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000c8  00000000  00000000  0000536b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 42 00 	jmp	0x84	; 0x84 <__ctors_end>
+   4:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+   8:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+   c:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  10:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  14:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  18:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  1c:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  20:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  24:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  28:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  2c:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  30:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  34:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  38:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  3c:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  40:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  44:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  48:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  4c:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  50:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  54:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  58:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  5c:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  60:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  64:	0c 94 5f 00 	jmp	0xbe	; 0xbe <__bad_interrupt>
+  68:	36 01       	movw	r6, r12
+  6a:	3b 01       	movw	r6, r22
+  6c:	40 01       	movw	r8, r0
+  6e:	45 01       	movw	r8, r10
+  70:	4a 01       	movw	r8, r20
+  72:	4f 01       	movw	r8, r30
+  74:	54 01       	movw	r10, r8
+  76:	83 01       	movw	r16, r6
+  78:	ae 01       	movw	r20, r28
+  7a:	d9 01       	movw	r26, r18
+  7c:	e8 01       	movw	r28, r16
+  7e:	13 02       	muls	r17, r19
+  80:	c9 02       	muls	r28, r25
+  82:	f4 02       	muls	r31, r20
+
+00000084 <__ctors_end>:
+  84:	11 24       	eor	r1, r1
+  86:	1f be       	out	0x3f, r1	; 63
+  88:	cf ef       	ldi	r28, 0xFF	; 255
+  8a:	d8 e0       	ldi	r29, 0x08	; 8
+  8c:	de bf       	out	0x3e, r29	; 62
+  8e:	cd bf       	out	0x3d, r28	; 61
+
+00000090 <__do_copy_data>:
+  90:	11 e0       	ldi	r17, 0x01	; 1
+  92:	a0 e0       	ldi	r26, 0x00	; 0
+  94:	b1 e0       	ldi	r27, 0x01	; 1
+  96:	e2 ee       	ldi	r30, 0xE2	; 226
+  98:	fa e0       	ldi	r31, 0x0A	; 10
+  9a:	02 c0       	rjmp	.+4      	; 0xa0 <__do_copy_data+0x10>
+  9c:	05 90       	lpm	r0, Z+
+  9e:	0d 92       	st	X+, r0
+  a0:	ac 31       	cpi	r26, 0x1C	; 28
+  a2:	b1 07       	cpc	r27, r17
+  a4:	d9 f7       	brne	.-10     	; 0x9c <__do_copy_data+0xc>
+
+000000a6 <__do_clear_bss>:
+  a6:	21 e0       	ldi	r18, 0x01	; 1
+  a8:	ac e1       	ldi	r26, 0x1C	; 28
+  aa:	b1 e0       	ldi	r27, 0x01	; 1
+  ac:	01 c0       	rjmp	.+2      	; 0xb0 <.do_clear_bss_start>
+
+000000ae <.do_clear_bss_loop>:
+  ae:	1d 92       	st	X+, r1
+
+000000b0 <.do_clear_bss_start>:
+  b0:	a6 32       	cpi	r26, 0x26	; 38
+  b2:	b2 07       	cpc	r27, r18
+  b4:	e1 f7       	brne	.-8      	; 0xae <.do_clear_bss_loop>
+  b6:	0e 94 23 03 	call	0x646	; 0x646 <main>
+  ba:	0c 94 6f 05 	jmp	0xade	; 0xade <_exit>
+
+000000be <__bad_interrupt>:
+  be:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000c2 <RTC_ConvertFromDecToBD>:
+
+//===================================================================================================================
+unsigned char RTC_ConvertFromDecToBD(unsigned char data)
+{
+	unsigned bdc_temp = (((data / 10) << 4) | (data % 10));
+	return bdc_temp;
+  c2:	9d ec       	ldi	r25, 0xCD	; 205
+  c4:	89 9f       	mul	r24, r25
+  c6:	91 2d       	mov	r25, r1
+  c8:	11 24       	eor	r1, r1
+  ca:	96 95       	lsr	r25
+  cc:	96 95       	lsr	r25
+  ce:	96 95       	lsr	r25
+  d0:	20 e1       	ldi	r18, 0x10	; 16
+  d2:	92 9f       	mul	r25, r18
+  d4:	a0 01       	movw	r20, r0
+  d6:	11 24       	eor	r1, r1
+  d8:	99 0f       	add	r25, r25
+  da:	29 2f       	mov	r18, r25
+  dc:	22 0f       	add	r18, r18
+  de:	22 0f       	add	r18, r18
+  e0:	92 0f       	add	r25, r18
+  e2:	89 1b       	sub	r24, r25
+}
+  e4:	84 2b       	or	r24, r20
+  e6:	08 95       	ret
+
+000000e8 <RTC_ConvertFromBDToDec>:
+//===================================================================================================================
+unsigned char RTC_ConvertFromBDToDec(unsigned char data)
+{
+	unsigned bdc_temp = ((data >> 4) * 10  +(0b00001111 & data));
+	return bdc_temp;
+  e8:	28 2f       	mov	r18, r24
+  ea:	22 95       	swap	r18
+  ec:	2f 70       	andi	r18, 0x0F	; 15
+  ee:	30 e0       	ldi	r19, 0x00	; 0
+  f0:	a9 01       	movw	r20, r18
+  f2:	44 0f       	add	r20, r20
+  f4:	55 1f       	adc	r21, r21
+  f6:	22 0f       	add	r18, r18
+  f8:	33 1f       	adc	r19, r19
+  fa:	22 0f       	add	r18, r18
+  fc:	33 1f       	adc	r19, r19
+  fe:	22 0f       	add	r18, r18
+ 100:	33 1f       	adc	r19, r19
+ 102:	24 0f       	add	r18, r20
+ 104:	35 1f       	adc	r19, r21
+ 106:	8f 70       	andi	r24, 0x0F	; 15
+}
+ 108:	82 0f       	add	r24, r18
+ 10a:	08 95       	ret
+
+0000010c <LCD_send_tetrad>:
+	ClearBit(LCD_AO_port, LCD_AO_pin);			// Сбрасываем все на всякий случай
+}
+//===================================================================================================================
+static void LCD_send_tetrad(byte data)
+{
+	set_E;										
+ 10c:	5a 9a       	sbi	0x0b, 2	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 10e:	95 e0       	ldi	r25, 0x05	; 5
+ 110:	9a 95       	dec	r25
+ 112:	f1 f7       	brne	.-4      	; 0x110 <LCD_send_tetrad+0x4>
+ 114:	00 00       	nop
+	_delay_us(1);											
+	data <<= LCD_data_PIN_shift;                         // Сдвигаем наши данные влево на значение сдвига пинов
+	LCD_data_port &= (0b11110000<<LCD_data_PIN_shift);	 // Обнуляема ножки на нашем порту, т.к. дальше используется "или"	
+ 116:	98 b1       	in	r25, 0x08	; 8
+ 118:	90 7f       	andi	r25, 0xF0	; 240
+ 11a:	98 b9       	out	0x08, r25	; 8
+	LCD_data_port |= data;								 // Отправляем наши биты в порт
+ 11c:	98 b1       	in	r25, 0x08	; 8
+ 11e:	89 2b       	or	r24, r25
+ 120:	88 b9       	out	0x08, r24	; 8
+	clear_E;
+ 122:	5a 98       	cbi	0x0b, 2	; 11
+ 124:	85 e0       	ldi	r24, 0x05	; 5
+ 126:	8a 95       	dec	r24
+ 128:	f1 f7       	brne	.-4      	; 0x126 <LCD_send_tetrad+0x1a>
+ 12a:	00 00       	nop
+ 12c:	08 95       	ret
+
+0000012e <LCD_chech_BF>:
+}
+//===================================================================================================================
+static void LCD_chech_BF(void)
+{
+	byte data;
+	DDR(LCD_data_port) &= ~(0b00001111<<LCD_data_PIN_shift);	// Настраиваем ноги порта на вход
+ 12e:	87 b1       	in	r24, 0x07	; 7
+ 130:	80 7f       	andi	r24, 0xF0	; 240
+ 132:	87 b9       	out	0x07, r24	; 7
+	clear_AO;													// Пишем команду чтения бита
+ 134:	5c 98       	cbi	0x0b, 4	; 11
+	set_RW;														// Читаем
+ 136:	5b 9a       	sbi	0x0b, 3	; 11
+	do				// Проверяем BF в цикле, пока он не обнулится
+	{
+		set_E;
+ 138:	5a 9a       	sbi	0x0b, 2	; 11
+ 13a:	85 e0       	ldi	r24, 0x05	; 5
+ 13c:	8a 95       	dec	r24
+ 13e:	f1 f7       	brne	.-4      	; 0x13c <LCD_chech_BF+0xe>
+ 140:	00 00       	nop
+		_delay_us(1);
+		data = PIN(LCD_data_port);					// Читаем порт					
+ 142:	86 b1       	in	r24, 0x06	; 6
+		data >>= (LCD_data_PIN_shift + 3);			// Оставляем только четвертый старший бит (BF)
+		data &= 0b0000001;							// Остальные биты тоже убирем
+		clear_E;
+ 144:	5a 98       	cbi	0x0b, 2	; 11
+ 146:	95 e0       	ldi	r25, 0x05	; 5
+ 148:	9a 95       	dec	r25
+ 14a:	f1 f7       	brne	.-4      	; 0x148 <LCD_chech_BF+0x1a>
+ 14c:	00 00       	nop
+		_delay_us(1);
+		set_E;              // Еще раз подергаем ногой, чтобы считать младшие 4 бита, хоть они и не нужны
+ 14e:	5a 9a       	sbi	0x0b, 2	; 11
+ 150:	95 e0       	ldi	r25, 0x05	; 5
+ 152:	9a 95       	dec	r25
+ 154:	f1 f7       	brne	.-4      	; 0x152 <LCD_chech_BF+0x24>
+ 156:	00 00       	nop
+		_delay_us(1);
+		clear_E;
+ 158:	5a 98       	cbi	0x0b, 2	; 11
+ 15a:	95 e0       	ldi	r25, 0x05	; 5
+ 15c:	9a 95       	dec	r25
+ 15e:	f1 f7       	brne	.-4      	; 0x15c <LCD_chech_BF+0x2e>
+ 160:	00 00       	nop
+		_delay_us(1);
+	} while (data);                                 // Если равен нулю, то уходим, иначе проверяем еще раз
+ 162:	83 fd       	sbrc	r24, 3
+ 164:	e9 cf       	rjmp	.-46     	; 0x138 <LCD_chech_BF+0xa>
+	clear_RW;
+ 166:	5b 98       	cbi	0x0b, 3	; 11
+	DDR(LCD_data_port) |= (0b00001111<<LCD_data_PIN_shift);	// Возвращаем порт на выход
+ 168:	87 b1       	in	r24, 0x07	; 7
+ 16a:	8f 60       	ori	r24, 0x0F	; 15
+ 16c:	87 b9       	out	0x07, r24	; 7
+ 16e:	08 95       	ret
+
+00000170 <LCD_send_char>:
+}
+//===================================================================================================================
+void LCD_send_char(byte data)
+{
+ 170:	cf 93       	push	r28
+ 172:	c8 2f       	mov	r28, r24
+	LCD_chech_BF();						// Проверяем бит занятости
+ 174:	0e 94 97 00 	call	0x12e	; 0x12e <LCD_chech_BF>
+	set_AO;								// Пишем данные
+ 178:	5c 9a       	sbi	0x0b, 4	; 11
+	byte shifted_data;					// Новая переманная, для хранения старшей тетрады
+	shifted_data = data >> 4;			// Записываем в нее старшую тетраду
+	LCD_send_tetrad(shifted_data);		// Отправляем старшую тетраду в LCD
+ 17a:	8c 2f       	mov	r24, r28
+ 17c:	82 95       	swap	r24
+ 17e:	8f 70       	andi	r24, 0x0F	; 15
+ 180:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+	data &= 0x0F;						// Оставляем только младшую тетраду
+	LCD_send_tetrad(data);				// Отпавляем младшую тетраду  в LCD
+ 184:	8c 2f       	mov	r24, r28
+ 186:	8f 70       	andi	r24, 0x0F	; 15
+ 188:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+}
+ 18c:	cf 91       	pop	r28
+ 18e:	08 95       	ret
+
+00000190 <LCD_send_com>:
+//===================================================================================================================
+void LCD_send_com(byte data)
+{
+ 190:	cf 93       	push	r28
+ 192:	c8 2f       	mov	r28, r24
+	LCD_chech_BF();							// Проверяем бит занятости
+ 194:	0e 94 97 00 	call	0x12e	; 0x12e <LCD_chech_BF>
+	clear_AO;								// Пишем команду
+ 198:	5c 98       	cbi	0x0b, 4	; 11
+	byte shifted_data;						// Новая переманная, для хранения старшей тетрады
+	shifted_data = data >> 4;				// Записываем в нее старшую тетраду
+	LCD_send_tetrad(shifted_data);			// Отправляем старшую тетраду в LCD
+ 19a:	8c 2f       	mov	r24, r28
+ 19c:	82 95       	swap	r24
+ 19e:	8f 70       	andi	r24, 0x0F	; 15
+ 1a0:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+	data &= 0x0F;							// Оставляем только младшую тетраду
+	LCD_send_tetrad(data);					// Отпавляем младшую тетраду  в LCD
+ 1a4:	8c 2f       	mov	r24, r28
+ 1a6:	8f 70       	andi	r24, 0x0F	; 15
+ 1a8:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+}
+ 1ac:	cf 91       	pop	r28
+ 1ae:	08 95       	ret
+
+000001b0 <LCD_init>:
+#include "LCD.h"
+
+//===================================================================================================================
+static void LCD_port_init(void)
+{
+	DDR(LCD_data_port) |= (0b00001111<<LCD_data_PIN_shift); // Установка
+ 1b0:	87 b1       	in	r24, 0x07	; 7
+ 1b2:	8f 60       	ori	r24, 0x0F	; 15
+ 1b4:	87 b9       	out	0x07, r24	; 7
+															// пинов с данными на выход
+	SetBit(DDR(LCD_RW_port), LCD_RW_pin);		// RW пин на выход
+ 1b6:	53 9a       	sbi	0x0a, 3	; 10
+	SetBit(DDR(LCD_E_port), LCD_E_pin);			// E пин на выход
+ 1b8:	52 9a       	sbi	0x0a, 2	; 10
+	SetBit(DDR(LCD_AO_port), LCD_AO_pin);		// AO пин на выход
+ 1ba:	54 9a       	sbi	0x0a, 4	; 10
+	ClearBit(LCD_RW_port, LCD_RW_pin);			// Сбрасываем все на всякий случай    
+ 1bc:	5b 98       	cbi	0x0b, 3	; 11
+	ClearBit(LCD_E_port, LCD_E_pin);			// Сбрасываем все на всякий случай
+ 1be:	5a 98       	cbi	0x0b, 2	; 11
+	ClearBit(LCD_AO_port, LCD_AO_pin);			// Сбрасываем все на всякий случай
+ 1c0:	5c 98       	cbi	0x0b, 4	; 11
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1c2:	2f ef       	ldi	r18, 0xFF	; 255
+ 1c4:	89 ef       	ldi	r24, 0xF9	; 249
+ 1c6:	90 e0       	ldi	r25, 0x00	; 0
+ 1c8:	21 50       	subi	r18, 0x01	; 1
+ 1ca:	80 40       	sbci	r24, 0x00	; 0
+ 1cc:	90 40       	sbci	r25, 0x00	; 0
+ 1ce:	e1 f7       	brne	.-8      	; 0x1c8 <LCD_init+0x18>
+ 1d0:	00 c0       	rjmp	.+0      	; 0x1d2 <LCD_init+0x22>
+ 1d2:	00 00       	nop
+//===================================================================================================================
+void LCD_init(void)
+{
+	LCD_port_init();						// Настраиваем наши ноги на выход
+	_delay_ms(20);							// Задержка по даташиту
+	LCD_send_tetrad(0b00000011);			// Тоже по даташиту, для выбора 4-битного режима
+ 1d4:	83 e0       	ldi	r24, 0x03	; 3
+ 1d6:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1da:	25 ed       	ldi	r18, 0xD5	; 213
+ 1dc:	2a 95       	dec	r18
+ 1de:	f1 f7       	brne	.-4      	; 0x1dc <LCD_init+0x2c>
+ 1e0:	00 00       	nop
+	_delay_us(40);							// Задержка по даташиту
+	LCD_send_tetrad(0b00000011);			// Тоже по даташиту, для выбора 4-битного режима
+ 1e2:	83 e0       	ldi	r24, 0x03	; 3
+ 1e4:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+ 1e8:	85 ed       	ldi	r24, 0xD5	; 213
+ 1ea:	8a 95       	dec	r24
+ 1ec:	f1 f7       	brne	.-4      	; 0x1ea <LCD_init+0x3a>
+ 1ee:	00 00       	nop
+	_delay_us(40);							// Задержка по даташиту
+	LCD_send_tetrad(0b00000011);			// Тоже по даташиту, для выбора 4-битного режима
+ 1f0:	83 e0       	ldi	r24, 0x03	; 3
+ 1f2:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+ 1f6:	95 ed       	ldi	r25, 0xD5	; 213
+ 1f8:	9a 95       	dec	r25
+ 1fa:	f1 f7       	brne	.-4      	; 0x1f8 <LCD_init+0x48>
+ 1fc:	00 00       	nop
+	_delay_us(40);							// Задержка по даташиту
+	LCD_send_tetrad(0b00000010);			// Тоже по даташиту, для выбора 4-битного режима
+ 1fe:	82 e0       	ldi	r24, 0x02	; 2
+ 200:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_send_tetrad>
+ 204:	25 ed       	ldi	r18, 0xD5	; 213
+ 206:	2a 95       	dec	r18
+ 208:	f1 f7       	brne	.-4      	; 0x206 <LCD_init+0x56>
+ 20a:	00 00       	nop
+	_delay_us(40);							// Задержка по даташиту
+	LCD_send_com(0b00101010);				// Установка разрядности и выбор страницы знакогенератора
+ 20c:	8a e2       	ldi	r24, 0x2A	; 42
+ 20e:	0e 94 c8 00 	call	0x190	; 0x190 <LCD_send_com>
+	LCD_send_com(0b00001100);				// Включаем модулю и выбор типа курсора
+ 212:	8c e0       	ldi	r24, 0x0C	; 12
+ 214:	0e 94 c8 00 	call	0x190	; 0x190 <LCD_send_com>
+	LCD_send_com(0b00000110);				// Сдвиг курсора вправо при записи данных, отключаем сдвиг дисплея
+ 218:	86 e0       	ldi	r24, 0x06	; 6
+ 21a:	0e 94 c8 00 	call	0x190	; 0x190 <LCD_send_com>
+	LCD_send_com(0b00000001);				// Очищаем дисплей и курсор в начало
+ 21e:	81 e0       	ldi	r24, 0x01	; 1
+ 220:	0e 94 c8 00 	call	0x190	; 0x190 <LCD_send_com>
+ 224:	08 95       	ret
+
+00000226 <LCD_send_string>:
+}
+//===================================================================================================================
+void LCD_send_string(char *string)
+{
+ 226:	cf 93       	push	r28
+ 228:	df 93       	push	r29
+ 22a:	ec 01       	movw	r28, r24
+	while (*string) // Пока не наткнемся на 0, означающий конец строчного массива
+ 22c:	88 81       	ld	r24, Y
+ 22e:	88 23       	and	r24, r24
+ 230:	31 f0       	breq	.+12     	; 0x23e <LCD_send_string+0x18>
+ 232:	21 96       	adiw	r28, 0x01	; 1
+	{
+		LCD_send_char(*string++); // Отправляем в LCD текущий байт нашего массива, после чего
+ 234:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+	LCD_send_com(0b00000001);				// Очищаем дисплей и курсор в начало
+}
+//===================================================================================================================
+void LCD_send_string(char *string)
+{
+	while (*string) // Пока не наткнемся на 0, означающий конец строчного массива
+ 238:	89 91       	ld	r24, Y+
+ 23a:	81 11       	cpse	r24, r1
+ 23c:	fb cf       	rjmp	.-10     	; 0x234 <LCD_send_string+0xe>
+	{
+		LCD_send_char(*string++); // Отправляем в LCD текущий байт нашего массива, после чего
+		//                                инкрементируем указатель
+	}
+}
+ 23e:	df 91       	pop	r29
+ 240:	cf 91       	pop	r28
+ 242:	08 95       	ret
+
+00000244 <LCD_set_pos>:
+//===================================================================================================================
+void LCD_set_pos(byte x, byte y)
+{
+	if (y)
+ 244:	66 23       	and	r22, r22
+ 246:	21 f0       	breq	.+8      	; 0x250 <LCD_set_pos+0xc>
+	{
+		LCD_send_com(0b11000000 | x);  /* старший бит в 1, это команда перехода на нужный символ. Второй бит
+ 248:	80 6c       	ori	r24, 0xC0	; 192
+ 24a:	0e 94 c8 00 	call	0x190	; 0x190 <LCD_send_com>
+ 24e:	08 95       	ret
+										  в 1, добавляет к адресу 0x40 (переходим на вторую строку) и добавляем смещение по х*/
+	}
+	else
+	{
+		LCD_send_com(0b10000000 | x); /* старший бит в 1, это команда перехода на нужный символ и добавляем смещение по х*/
+ 250:	80 68       	ori	r24, 0x80	; 128
+ 252:	0e 94 c8 00 	call	0x190	; 0x190 <LCD_send_com>
+ 256:	08 95       	ret
+
+00000258 <LCD_Show_day>:
+    }
+}
+//===================================================================================================================
+void LCD_Show_day(byte days)	// Функция которая выводит название дня недели
+{
+	switch (days)				// В зависимисти от переданного ей номера дня недели выводит его название
+ 258:	90 e0       	ldi	r25, 0x00	; 0
+ 25a:	fc 01       	movw	r30, r24
+ 25c:	31 97       	sbiw	r30, 0x01	; 1
+ 25e:	e7 30       	cpi	r30, 0x07	; 7
+ 260:	f1 05       	cpc	r31, r1
+ 262:	30 f5       	brcc	.+76     	; 0x2b0 <LCD_Show_day+0x58>
+ 264:	ec 5c       	subi	r30, 0xCC	; 204
+ 266:	ff 4f       	sbci	r31, 0xFF	; 255
+ 268:	0c 94 69 05 	jmp	0xad2	; 0xad2 <__tablejump2__>
+	{
+		case 1:
+		LCD_send_string("Mon");		// Понедельние
+ 26c:	80 e0       	ldi	r24, 0x00	; 0
+ 26e:	91 e0       	ldi	r25, 0x01	; 1
+ 270:	0e 94 13 01 	call	0x226	; 0x226 <LCD_send_string>
+		break;
+ 274:	08 95       	ret
+		case 2:
+		LCD_send_string("Tue");		// Вторник
+ 276:	84 e0       	ldi	r24, 0x04	; 4
+ 278:	91 e0       	ldi	r25, 0x01	; 1
+ 27a:	0e 94 13 01 	call	0x226	; 0x226 <LCD_send_string>
+		break;
+ 27e:	08 95       	ret
+		case 3:
+		LCD_send_string("Wed");		// Среда
+ 280:	88 e0       	ldi	r24, 0x08	; 8
+ 282:	91 e0       	ldi	r25, 0x01	; 1
+ 284:	0e 94 13 01 	call	0x226	; 0x226 <LCD_send_string>
+		break;
+ 288:	08 95       	ret
+		case 4:
+		LCD_send_string("Thu");		// Четверг
+ 28a:	8c e0       	ldi	r24, 0x0C	; 12
+ 28c:	91 e0       	ldi	r25, 0x01	; 1
+ 28e:	0e 94 13 01 	call	0x226	; 0x226 <LCD_send_string>
+		break;
+ 292:	08 95       	ret
+		case 5:
+		LCD_send_string("Fri");		// Пятница
+ 294:	80 e1       	ldi	r24, 0x10	; 16
+ 296:	91 e0       	ldi	r25, 0x01	; 1
+ 298:	0e 94 13 01 	call	0x226	; 0x226 <LCD_send_string>
+		break;
+ 29c:	08 95       	ret
+		case 6:
+		LCD_send_string("Sat");		// Суббота
+ 29e:	84 e1       	ldi	r24, 0x14	; 20
+ 2a0:	91 e0       	ldi	r25, 0x01	; 1
+ 2a2:	0e 94 13 01 	call	0x226	; 0x226 <LCD_send_string>
+		break;
+ 2a6:	08 95       	ret
+		case 7:
+		LCD_send_string("Sun");		// Воскресенье
+ 2a8:	88 e1       	ldi	r24, 0x18	; 24
+ 2aa:	91 e0       	ldi	r25, 0x01	; 1
+ 2ac:	0e 94 13 01 	call	0x226	; 0x226 <LCD_send_string>
+ 2b0:	08 95       	ret
+
+000002b2 <LCD_send_BCD>:
+		break;
+	}
+}
+//===================================================================================================================
+void LCD_send_BCD(byte data)				// Отправляем на LCD ДДК в виде обычных цифр
+{
+ 2b2:	cf 93       	push	r28
+ 2b4:	c8 2f       	mov	r28, r24
+	LCD_send_char((data>>4) + 0x30);			// Добавляем 0x30, так как символ 0 имеет кодировку 0x30, символ 1 это 0x31 и т.д.
+ 2b6:	82 95       	swap	r24
+ 2b8:	8f 70       	andi	r24, 0x0F	; 15
+ 2ba:	80 5d       	subi	r24, 0xD0	; 208
+ 2bc:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+	LCD_send_char((data & 0x0F) + 0x30);
+ 2c0:	8c 2f       	mov	r24, r28
+ 2c2:	8f 70       	andi	r24, 0x0F	; 15
+ 2c4:	80 5d       	subi	r24, 0xD0	; 208
+ 2c6:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+}
+ 2ca:	cf 91       	pop	r28
+ 2cc:	08 95       	ret
+
+000002ce <Button_PORT_ini>:
+//===================================================================================================================
+void Button_PORT_ini(void)				// Инициализация пинов с кнопками
+{
+	DDR(Button_PORT) &= ~((1<<First_Button_PIN) | (1<<Second_Button_PIN) | (1<<Third_Button_PIN)); // на вход
+ 2ce:	8a b1       	in	r24, 0x0a	; 10
+ 2d0:	8f 71       	andi	r24, 0x1F	; 31
+ 2d2:	8a b9       	out	0x0a, r24	; 10
+	Button_PORT |= ((1<<First_Button_PIN) | (1<<Second_Button_PIN) | (1<<Third_Button_PIN)); // подтягиваем к 1
+ 2d4:	8b b1       	in	r24, 0x0b	; 11
+ 2d6:	80 6e       	ori	r24, 0xE0	; 224
+ 2d8:	8b b9       	out	0x0b, r24	; 11
+ 2da:	08 95       	ret
+
+000002dc <Modify_Value_of_RTC>:
+}
+//===================================================================================================================
+void Modify_Value_of_RTC(byte index, byte direction)
+{
+ 2dc:	cf 93       	push	r28
+ 2de:	df 93       	push	r29
+ 2e0:	c8 2f       	mov	r28, r24
+ 2e2:	d6 2f       	mov	r29, r22
+	I2C_StartCondition();                // Условие старт, мы же будем писать в DS3231 наше измененное время сразу
+ 2e4:	0e 94 29 05 	call	0xa52	; 0xa52 <I2C_StartCondition>
+	I2C_SendByte(deviceAddress);		 // Адрес устройства и "запись"
+ 2e8:	80 ed       	ldi	r24, 0xD0	; 208
+ 2ea:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+	switch(index)						 // В зависимости от того, в каком моде произошел вызов и что мы будем менять
+ 2ee:	8c 2f       	mov	r24, r28
+ 2f0:	90 e0       	ldi	r25, 0x00	; 0
+ 2f2:	fc 01       	movw	r30, r24
+ 2f4:	31 97       	sbiw	r30, 0x01	; 1
+ 2f6:	e7 30       	cpi	r30, 0x07	; 7
+ 2f8:	f1 05       	cpc	r31, r1
+ 2fa:	08 f0       	brcs	.+2      	; 0x2fe <Modify_Value_of_RTC+0x22>
+ 2fc:	9f c1       	rjmp	.+830    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+ 2fe:	e5 5c       	subi	r30, 0xC5	; 197
+ 300:	ff 4f       	sbci	r31, 0xFF	; 255
+ 302:	0c 94 69 05 	jmp	0xad2	; 0xad2 <__tablejump2__>
+	{
+		case 1: // часы
+			I2C_SendByte(2);             // Адрес часов 0x02
+ 306:	82 e0       	ldi	r24, 0x02	; 2
+ 308:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			hour = RTC_ConvertFromBDToDec(hour);  // Сперва приведем часы к нормальному значению, чтобы инкрементировать их
+ 30c:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <hour>
+ 310:	0e 94 74 00 	call	0xe8	; 0xe8 <RTC_ConvertFromBDToDec>
+ 314:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <hour>
+			if (direction)						  // Направление, в зависимости от того, какую кнопку нажимаем
+ 318:	dd 23       	and	r29, r29
+ 31a:	81 f0       	breq	.+32     	; 0x33c <Modify_Value_of_RTC+0x60>
+			{
+				if(hour < 23) I2C_SendByte(RTC_ConvertFromDecToBD(++hour));		// Если < 23 то прибавляем 1 и пишем в RTC
+ 31c:	87 31       	cpi	r24, 0x17	; 23
+ 31e:	40 f4       	brcc	.+16     	; 0x330 <Modify_Value_of_RTC+0x54>
+ 320:	8f 5f       	subi	r24, 0xFF	; 255
+ 322:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <hour>
+ 326:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 32a:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 32e:	86 c1       	rjmp	.+780    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(1));					// Если нет, то пишем 1
+ 330:	81 e0       	ldi	r24, 0x01	; 1
+ 332:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 336:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 33a:	80 c1       	rjmp	.+768    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			else
+			{
+				if(hour > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--hour));		// Если > 1 то отнимаем 1 и пишем в RTC
+ 33c:	82 30       	cpi	r24, 0x02	; 2
+ 33e:	40 f0       	brcs	.+16     	; 0x350 <Modify_Value_of_RTC+0x74>
+ 340:	81 50       	subi	r24, 0x01	; 1
+ 342:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <hour>
+ 346:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 34a:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 34e:	76 c1       	rjmp	.+748    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(23));					// Если нет, то пишем 23
+ 350:	87 e1       	ldi	r24, 0x17	; 23
+ 352:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 356:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 35a:	70 c1       	rjmp	.+736    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			break;
+		case 2: // минуты 
+			I2C_SendByte(1);             // Адрес минут 0x01
+ 35c:	81 e0       	ldi	r24, 0x01	; 1
+ 35e:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			min = RTC_ConvertFromBDToDec(min);	// Сперва приведем минуты к нормальному значению, чтобы инкрементировать их
+ 362:	80 91 22 01 	lds	r24, 0x0122	; 0x800122 <min>
+ 366:	0e 94 74 00 	call	0xe8	; 0xe8 <RTC_ConvertFromBDToDec>
+ 36a:	80 93 22 01 	sts	0x0122, r24	; 0x800122 <min>
+			if (direction)						  // Направление, в зависимости от того, какую кнопку нажимаем
+ 36e:	dd 23       	and	r29, r29
+ 370:	81 f0       	breq	.+32     	; 0x392 <Modify_Value_of_RTC+0xb6>
+			{
+				if(min < 59) I2C_SendByte(RTC_ConvertFromDecToBD(++min));		// Если < 59 то прибавляем 1 и пишем в RTC
+ 372:	8b 33       	cpi	r24, 0x3B	; 59
+ 374:	40 f4       	brcc	.+16     	; 0x386 <Modify_Value_of_RTC+0xaa>
+ 376:	8f 5f       	subi	r24, 0xFF	; 255
+ 378:	80 93 22 01 	sts	0x0122, r24	; 0x800122 <min>
+ 37c:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 380:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 384:	5b c1       	rjmp	.+694    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(1));					// Если нет, то пишем 1
+ 386:	81 e0       	ldi	r24, 0x01	; 1
+ 388:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 38c:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 390:	55 c1       	rjmp	.+682    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			else
+			{
+				if(min > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--min));		// Если > 1 то отнимаем 1 и пишем в RTC
+ 392:	82 30       	cpi	r24, 0x02	; 2
+ 394:	40 f0       	brcs	.+16     	; 0x3a6 <Modify_Value_of_RTC+0xca>
+ 396:	81 50       	subi	r24, 0x01	; 1
+ 398:	80 93 22 01 	sts	0x0122, r24	; 0x800122 <min>
+ 39c:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 3a0:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 3a4:	4b c1       	rjmp	.+662    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(59));					// Если нет, то пишем 59
+ 3a6:	8b e3       	ldi	r24, 0x3B	; 59
+ 3a8:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 3ac:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 3b0:	45 c1       	rjmp	.+650    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			break;
+		case 3: // секунды
+			I2C_SendByte(0);             // Адрес секунд 0x00
+ 3b2:	80 e0       	ldi	r24, 0x00	; 0
+ 3b4:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			if (direction)							// Направление, в зависимости от того, какую кнопку нажимаем
+ 3b8:	dd 23       	and	r29, r29
+ 3ba:	21 f0       	breq	.+8      	; 0x3c4 <Modify_Value_of_RTC+0xe8>
+			{
+				I2C_SendByte(0);					// Пишем 0 секунд
+ 3bc:	80 e0       	ldi	r24, 0x00	; 0
+ 3be:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 3c2:	3c c1       	rjmp	.+632    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			else
+			{
+				I2C_SendByte(RTC_ConvertFromDecToBD(30));	// Пишем 30 секунд
+ 3c4:	8e e1       	ldi	r24, 0x1E	; 30
+ 3c6:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 3ca:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 3ce:	36 c1       	rjmp	.+620    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			break;
+		case 4: // дни недели
+			I2C_SendByte(3);             // Адрес недели 0x03
+ 3d0:	83 e0       	ldi	r24, 0x03	; 3
+ 3d2:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			days = RTC_ConvertFromBDToDec(days);  // Сперва приведем недели к нормальному значению, чтобы инкрементировать их
+ 3d6:	80 91 1f 01 	lds	r24, 0x011F	; 0x80011f <days>
+ 3da:	0e 94 74 00 	call	0xe8	; 0xe8 <RTC_ConvertFromBDToDec>
+ 3de:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <days>
+			if (direction)						  // Направление, в зависимости от того, какую кнопку нажимаем
+ 3e2:	dd 23       	and	r29, r29
+ 3e4:	81 f0       	breq	.+32     	; 0x406 <__LOCK_REGION_LENGTH__+0x6>
+			{
+				if(days < 7) I2C_SendByte(RTC_ConvertFromDecToBD(++days));		// Если < 7 то прибавляем 1 и пишем в RTC
+ 3e6:	87 30       	cpi	r24, 0x07	; 7
+ 3e8:	40 f4       	brcc	.+16     	; 0x3fa <Modify_Value_of_RTC+0x11e>
+ 3ea:	8f 5f       	subi	r24, 0xFF	; 255
+ 3ec:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <days>
+ 3f0:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 3f4:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 3f8:	21 c1       	rjmp	.+578    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(1));					// Если нет, то пишем 1
+ 3fa:	81 e0       	ldi	r24, 0x01	; 1
+ 3fc:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 400:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 404:	1b c1       	rjmp	.+566    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			else
+			{
+				if(days > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--days));		// Если > 1 то отнимаем 1 и пишем в RTC
+ 406:	82 30       	cpi	r24, 0x02	; 2
+ 408:	40 f0       	brcs	.+16     	; 0x41a <__LOCK_REGION_LENGTH__+0x1a>
+ 40a:	81 50       	subi	r24, 0x01	; 1
+ 40c:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <days>
+ 410:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 414:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 418:	11 c1       	rjmp	.+546    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(7));					// Если нет, то пишем 7
+ 41a:	87 e0       	ldi	r24, 0x07	; 7
+ 41c:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 420:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 424:	0b c1       	rjmp	.+534    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			break;
+		case 5: // дата
+			I2C_SendByte(4);             // Адрес даты 0x04
+ 426:	84 e0       	ldi	r24, 0x04	; 4
+ 428:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			date = RTC_ConvertFromBDToDec(date);  // Сперва приведем даты к нормальному значению, чтобы инкрементировать их
+ 42c:	80 91 25 01 	lds	r24, 0x0125	; 0x800125 <date>
+ 430:	0e 94 74 00 	call	0xe8	; 0xe8 <RTC_ConvertFromBDToDec>
+ 434:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+			if (direction)						  // Направление, в зависимости от того, какую кнопку нажимаем (прибавляем)
+ 438:	dd 23       	and	r29, r29
+ 43a:	09 f4       	brne	.+2      	; 0x43e <__LOCK_REGION_LENGTH__+0x3e>
+ 43c:	55 c0       	rjmp	.+170    	; 0x4e8 <__LOCK_REGION_LENGTH__+0xe8>
+			{
+				if (month == 2)  // если февраль, то...
+ 43e:	90 91 20 01 	lds	r25, 0x0120	; 0x800120 <month>
+ 442:	92 30       	cpi	r25, 0x02	; 2
+ 444:	21 f5       	brne	.+72     	; 0x48e <__LOCK_REGION_LENGTH__+0x8e>
+				{
+					if (year%4 == 0) // и если високосный год...
+ 446:	90 91 23 01 	lds	r25, 0x0123	; 0x800123 <year>
+ 44a:	93 70       	andi	r25, 0x03	; 3
+ 44c:	81 f4       	brne	.+32     	; 0x46e <__LOCK_REGION_LENGTH__+0x6e>
+					{
+						if(date < 29) I2C_SendByte(RTC_ConvertFromDecToBD(++date));	// Если < 29 то прибавляем 1 и пишем в RTC
+ 44e:	8d 31       	cpi	r24, 0x1D	; 29
+ 450:	40 f4       	brcc	.+16     	; 0x462 <__LOCK_REGION_LENGTH__+0x62>
+ 452:	8f 5f       	subi	r24, 0xFF	; 255
+ 454:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 458:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 45c:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 460:	ed c0       	rjmp	.+474    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+						else I2C_SendByte(RTC_ConvertFromDecToBD(1));				// Если нет, то пишем 1
+ 462:	81 e0       	ldi	r24, 0x01	; 1
+ 464:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 468:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 46c:	e7 c0       	rjmp	.+462    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					} 
+					else			// а если не високосный год...
+					{
+						if(date < 28) I2C_SendByte(RTC_ConvertFromDecToBD(++date));	// Если < 28 то прибавляем 1 и пишем в RTC
+ 46e:	8c 31       	cpi	r24, 0x1C	; 28
+ 470:	40 f4       	brcc	.+16     	; 0x482 <__LOCK_REGION_LENGTH__+0x82>
+ 472:	8f 5f       	subi	r24, 0xFF	; 255
+ 474:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 478:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 47c:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 480:	dd c0       	rjmp	.+442    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+						else I2C_SendByte(RTC_ConvertFromDecToBD(1));				// Если нет, то пишем 1
+ 482:	81 e0       	ldi	r24, 0x01	; 1
+ 484:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 488:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 48c:	d7 c0       	rjmp	.+430    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					}
+				}
+				else if((month==4)|(month==6)|(month==9)|(month==11))  // Если у нас месяц, в котором 31 день
+ 48e:	9d 7f       	andi	r25, 0xFD	; 253
+ 490:	21 e0       	ldi	r18, 0x01	; 1
+ 492:	94 30       	cpi	r25, 0x04	; 4
+ 494:	09 f0       	breq	.+2      	; 0x498 <__LOCK_REGION_LENGTH__+0x98>
+ 496:	20 e0       	ldi	r18, 0x00	; 0
+ 498:	21 11       	cpse	r18, r1
+ 49a:	06 c0       	rjmp	.+12     	; 0x4a8 <__LOCK_REGION_LENGTH__+0xa8>
+ 49c:	21 e0       	ldi	r18, 0x01	; 1
+ 49e:	99 30       	cpi	r25, 0x09	; 9
+ 4a0:	09 f0       	breq	.+2      	; 0x4a4 <__LOCK_REGION_LENGTH__+0xa4>
+ 4a2:	20 e0       	ldi	r18, 0x00	; 0
+ 4a4:	22 23       	and	r18, r18
+ 4a6:	81 f0       	breq	.+32     	; 0x4c8 <__LOCK_REGION_LENGTH__+0xc8>
+				{
+					if(date < 30) I2C_SendByte(RTC_ConvertFromDecToBD(++date));		// Если < 30 то прибавляем 1 и пишем в RTC
+ 4a8:	8e 31       	cpi	r24, 0x1E	; 30
+ 4aa:	40 f4       	brcc	.+16     	; 0x4bc <__LOCK_REGION_LENGTH__+0xbc>
+ 4ac:	8f 5f       	subi	r24, 0xFF	; 255
+ 4ae:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 4b2:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 4b6:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 4ba:	c0 c0       	rjmp	.+384    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					else I2C_SendByte(RTC_ConvertFromDecToBD(1));					// Если нет, то пишем 1
+ 4bc:	81 e0       	ldi	r24, 0x01	; 1
+ 4be:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 4c2:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 4c6:	ba c0       	rjmp	.+372    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				}
+				else                                                                 // Все остальные месяцы
+				{
+					if(date < 31) I2C_SendByte(RTC_ConvertFromDecToBD(++date));		// Если < 31 то прибавляем 1 и пишем в RTC
+ 4c8:	8f 31       	cpi	r24, 0x1F	; 31
+ 4ca:	40 f4       	brcc	.+16     	; 0x4dc <__LOCK_REGION_LENGTH__+0xdc>
+ 4cc:	8f 5f       	subi	r24, 0xFF	; 255
+ 4ce:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 4d2:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 4d6:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 4da:	b0 c0       	rjmp	.+352    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					else I2C_SendByte(RTC_ConvertFromDecToBD(1));					// Если нет, то пишем 1
+ 4dc:	81 e0       	ldi	r24, 0x01	; 1
+ 4de:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 4e2:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 4e6:	aa c0       	rjmp	.+340    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				}
+			}
+			else						  // Направление, в зависимости от того (убавляем)
+			{
+				if (month == 2)  // если февраль, то...
+ 4e8:	90 91 20 01 	lds	r25, 0x0120	; 0x800120 <month>
+ 4ec:	92 30       	cpi	r25, 0x02	; 2
+ 4ee:	21 f5       	brne	.+72     	; 0x538 <__LOCK_REGION_LENGTH__+0x138>
+				{
+					if (year%4 == 0) // и если високосный год...
+ 4f0:	90 91 23 01 	lds	r25, 0x0123	; 0x800123 <year>
+ 4f4:	93 70       	andi	r25, 0x03	; 3
+ 4f6:	81 f4       	brne	.+32     	; 0x518 <__LOCK_REGION_LENGTH__+0x118>
+					{
+						if(date > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--date));	// Если > 1 то отнимаем 1 и пишем в RTC
+ 4f8:	82 30       	cpi	r24, 0x02	; 2
+ 4fa:	40 f0       	brcs	.+16     	; 0x50c <__LOCK_REGION_LENGTH__+0x10c>
+ 4fc:	81 50       	subi	r24, 0x01	; 1
+ 4fe:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 502:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 506:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 50a:	98 c0       	rjmp	.+304    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+						else I2C_SendByte(RTC_ConvertFromDecToBD(29));				// Если нет, то пишем 29
+ 50c:	8d e1       	ldi	r24, 0x1D	; 29
+ 50e:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 512:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 516:	92 c0       	rjmp	.+292    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					} 
+					else			// а если не високосный год...
+					{
+						if(date > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--date));	// Если > 1 то отнимаем 1 и пишем в RTC
+ 518:	82 30       	cpi	r24, 0x02	; 2
+ 51a:	40 f0       	brcs	.+16     	; 0x52c <__LOCK_REGION_LENGTH__+0x12c>
+ 51c:	81 50       	subi	r24, 0x01	; 1
+ 51e:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 522:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 526:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 52a:	88 c0       	rjmp	.+272    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+						else I2C_SendByte(RTC_ConvertFromDecToBD(28));				// Если нет, то пишем 28
+ 52c:	8c e1       	ldi	r24, 0x1C	; 28
+ 52e:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 532:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 536:	82 c0       	rjmp	.+260    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					}
+				}
+				else if((month==4)|(month==6)|(month==9)|(month==11))  // Если у нас месяц, в котором 31 день
+ 538:	9d 7f       	andi	r25, 0xFD	; 253
+ 53a:	21 e0       	ldi	r18, 0x01	; 1
+ 53c:	94 30       	cpi	r25, 0x04	; 4
+ 53e:	09 f0       	breq	.+2      	; 0x542 <__LOCK_REGION_LENGTH__+0x142>
+ 540:	20 e0       	ldi	r18, 0x00	; 0
+ 542:	21 11       	cpse	r18, r1
+ 544:	06 c0       	rjmp	.+12     	; 0x552 <__LOCK_REGION_LENGTH__+0x152>
+ 546:	21 e0       	ldi	r18, 0x01	; 1
+ 548:	99 30       	cpi	r25, 0x09	; 9
+ 54a:	09 f0       	breq	.+2      	; 0x54e <__LOCK_REGION_LENGTH__+0x14e>
+ 54c:	20 e0       	ldi	r18, 0x00	; 0
+ 54e:	22 23       	and	r18, r18
+ 550:	81 f0       	breq	.+32     	; 0x572 <__LOCK_REGION_LENGTH__+0x172>
+				{
+					if(date > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--date));	// Если > 1 то отнимаем 1 и пишем в RTC
+ 552:	82 30       	cpi	r24, 0x02	; 2
+ 554:	40 f0       	brcs	.+16     	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+ 556:	81 50       	subi	r24, 0x01	; 1
+ 558:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 55c:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 560:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 564:	6b c0       	rjmp	.+214    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					else I2C_SendByte(RTC_ConvertFromDecToBD(30));				// Если нет, то пишем 30
+ 566:	8e e1       	ldi	r24, 0x1E	; 30
+ 568:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 56c:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 570:	65 c0       	rjmp	.+202    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				}
+				else                                                                 // Все остальные месяцы
+				{
+					if(date > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--date));	// Если > 1 то отнимаем 1 и пишем в RTC
+ 572:	82 30       	cpi	r24, 0x02	; 2
+ 574:	40 f0       	brcs	.+16     	; 0x586 <__LOCK_REGION_LENGTH__+0x186>
+ 576:	81 50       	subi	r24, 0x01	; 1
+ 578:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+ 57c:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 580:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 584:	5b c0       	rjmp	.+182    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+					else I2C_SendByte(RTC_ConvertFromDecToBD(31));				// Если нет, то пишем 31
+ 586:	8f e1       	ldi	r24, 0x1F	; 31
+ 588:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 58c:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 590:	55 c0       	rjmp	.+170    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				}
+				
+			}
+			break;
+		case 6: // месяц
+			I2C_SendByte(5);             // Адрес месяца 0x05
+ 592:	85 e0       	ldi	r24, 0x05	; 5
+ 594:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			month = RTC_ConvertFromBDToDec(month);  // Сперва приведем месяц к нормальному значению, чтобы инкрементировать их
+ 598:	80 91 20 01 	lds	r24, 0x0120	; 0x800120 <month>
+ 59c:	0e 94 74 00 	call	0xe8	; 0xe8 <RTC_ConvertFromBDToDec>
+ 5a0:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <month>
+			if (direction)						  // Направление, в зависимости от того, какую кнопку нажимаем (прибавляем)
+ 5a4:	dd 23       	and	r29, r29
+ 5a6:	81 f0       	breq	.+32     	; 0x5c8 <__LOCK_REGION_LENGTH__+0x1c8>
+			{
+				if(month < 12) I2C_SendByte(RTC_ConvertFromDecToBD(++month));		// Если < 12 то прибавляем 1 и пишем в RTC
+ 5a8:	8c 30       	cpi	r24, 0x0C	; 12
+ 5aa:	40 f4       	brcc	.+16     	; 0x5bc <__LOCK_REGION_LENGTH__+0x1bc>
+ 5ac:	8f 5f       	subi	r24, 0xFF	; 255
+ 5ae:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <month>
+ 5b2:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 5b6:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 5ba:	40 c0       	rjmp	.+128    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(1));				// Если нет, то пишем 1
+ 5bc:	81 e0       	ldi	r24, 0x01	; 1
+ 5be:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 5c2:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 5c6:	3a c0       	rjmp	.+116    	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			else						  // Направление, в зависимости от того, какую кнопку нажимаем (отнимаем)
+			{
+				if(month > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--month));	// Если > 1 то отнимаем 1 и пишем в RTC
+ 5c8:	82 30       	cpi	r24, 0x02	; 2
+ 5ca:	40 f0       	brcs	.+16     	; 0x5dc <__LOCK_REGION_LENGTH__+0x1dc>
+ 5cc:	81 50       	subi	r24, 0x01	; 1
+ 5ce:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <month>
+ 5d2:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 5d6:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 5da:	30 c0       	rjmp	.+96     	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(12));				// Если нет, то пишем 12
+ 5dc:	8c e0       	ldi	r24, 0x0C	; 12
+ 5de:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 5e2:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 5e6:	2a c0       	rjmp	.+84     	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			break;
+		case 7: // год
+			I2C_SendByte(6);             // Адрес года 0x05
+ 5e8:	86 e0       	ldi	r24, 0x06	; 6
+ 5ea:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			year = RTC_ConvertFromBDToDec(year);  // Сперва приведем год к нормальному значению, чтобы инкрементировать их
+ 5ee:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <year>
+ 5f2:	0e 94 74 00 	call	0xe8	; 0xe8 <RTC_ConvertFromBDToDec>
+ 5f6:	80 93 23 01 	sts	0x0123, r24	; 0x800123 <year>
+			if (direction)						  // Направление, в зависимости от того, какую кнопку нажимаем (прибавляем)
+ 5fa:	dd 23       	and	r29, r29
+ 5fc:	81 f0       	breq	.+32     	; 0x61e <__LOCK_REGION_LENGTH__+0x21e>
+			{
+				if(year < 99) I2C_SendByte(RTC_ConvertFromDecToBD(++year));		// Если < 99 то прибавляем 1 и пишем в RTC
+ 5fe:	83 36       	cpi	r24, 0x63	; 99
+ 600:	40 f4       	brcc	.+16     	; 0x612 <__LOCK_REGION_LENGTH__+0x212>
+ 602:	8f 5f       	subi	r24, 0xFF	; 255
+ 604:	80 93 23 01 	sts	0x0123, r24	; 0x800123 <year>
+ 608:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 60c:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 610:	15 c0       	rjmp	.+42     	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(1));				// Если нет, то пишем 1
+ 612:	81 e0       	ldi	r24, 0x01	; 1
+ 614:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 618:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 61c:	0f c0       	rjmp	.+30     	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+			}
+			else						  // Направление, в зависимости от того, какую кнопку нажимаем (отнимаем)
+			{
+				if(year > 1) I2C_SendByte(RTC_ConvertFromDecToBD(--year));	// Если > 1 то отнимаем 1 и пишем в RTC
+ 61e:	82 30       	cpi	r24, 0x02	; 2
+ 620:	40 f0       	brcs	.+16     	; 0x632 <__LOCK_REGION_LENGTH__+0x232>
+ 622:	81 50       	subi	r24, 0x01	; 1
+ 624:	80 93 23 01 	sts	0x0123, r24	; 0x800123 <year>
+ 628:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 62c:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+ 630:	05 c0       	rjmp	.+10     	; 0x63c <__LOCK_REGION_LENGTH__+0x23c>
+				else I2C_SendByte(RTC_ConvertFromDecToBD(99));				// Если нет, то пишем 99
+ 632:	83 e6       	ldi	r24, 0x63	; 99
+ 634:	0e 94 61 00 	call	0xc2	; 0xc2 <RTC_ConvertFromDecToBD>
+ 638:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+			}
+			break;
+	}
+	I2C_StopCondition(); // Условие стоп
+ 63c:	0e 94 32 05 	call	0xa64	; 0xa64 <I2C_StopCondition>
+}
+ 640:	df 91       	pop	r29
+ 642:	cf 91       	pop	r28
+ 644:	08 95       	ret
+
+00000646 <main>:
+byte First_button_state = 0;
+byte blinkstate = 0;
+//===================================================================================================================
+int main(void)
+{
+    LCD_init();									// Инициализация LCD
+ 646:	0e 94 d8 00 	call	0x1b0	; 0x1b0 <LCD_init>
+	I2C_Init();									// Инициализация I2C
+ 64a:	0e 94 25 05 	call	0xa4a	; 0xa4a <I2C_Init>
+	Button_PORT_ini();							// Инициализация порта с кнопками
+ 64e:	0e 94 67 01 	call	0x2ce	; 0x2ce <Button_PORT_ini>
+//===================================================================================================================
+		if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажака
+		{
+			if (Clock_Mode == Clock_Mode_common)
+			{
+				Clock_Mode = Clock_Mode_hour;		// Перейдем в режим перевода часов
+ 652:	c1 e0       	ldi	r28, 0x01	; 1
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перейти в режим перевода минут
+				{
+					Clock_Mode = Clock_Mode_min;	// Режим перевода минут
+ 654:	68 94       	set
+ 656:	ff 24       	eor	r15, r15
+ 658:	f1 f8       	bld	r15, 1
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода секунд
+				{
+					Clock_Mode = Clock_Mode_sec;	// Режим перевода секунд
+ 65a:	03 e0       	ldi	r16, 0x03	; 3
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода даты
+				{
+					Clock_Mode = Clock_Mode_date;	// Режим перевода даты
+ 65c:	15 e0       	ldi	r17, 0x05	; 5
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода года
+				{
+					Clock_Mode = Clock_Mode_year;	// Режим перевода года
+ 65e:	d7 e0       	ldi	r29, 0x07	; 7
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 660:	2f ef       	ldi	r18, 0xFF	; 255
+ 662:	81 ee       	ldi	r24, 0xE1	; 225
+ 664:	94 e0       	ldi	r25, 0x04	; 4
+ 666:	21 50       	subi	r18, 0x01	; 1
+ 668:	80 40       	sbci	r24, 0x00	; 0
+ 66a:	90 40       	sbci	r25, 0x00	; 0
+ 66c:	e1 f7       	brne	.-8      	; 0x666 <main+0x20>
+ 66e:	00 c0       	rjmp	.+0      	; 0x670 <main+0x2a>
+ 670:	00 00       	nop
+	
+    while (1) 
+    {
+		_delay_ms(delay);
+//===================================================================================================================
+		I2C_SendByteByAddr(0, deviceAddress);			// Переходим на адрес 0, обращаясь при этом к адресу нашего RTC
+ 672:	60 ed       	ldi	r22, 0xD0	; 208
+ 674:	80 e0       	ldi	r24, 0x00	; 0
+ 676:	0e 94 41 05 	call	0xa82	; 0xa82 <I2C_SendByteByAddr>
+		I2C_StartCondition();							// Условие старт для шини TWI
+ 67a:	0e 94 29 05 	call	0xa52	; 0xa52 <I2C_StartCondition>
+		I2C_SendByte((deviceAddress | 1));				// Говорим RTC что мы обращаемся к нему и что хотим читать
+ 67e:	81 ed       	ldi	r24, 0xD1	; 209
+ 680:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+				
+		sec = I2C_ReadByte();							// Читаем секунды, которые нам передают с 0 адреса
+ 684:	0e 94 53 05 	call	0xaa6	; 0xaa6 <I2C_ReadByte>
+ 688:	80 93 24 01 	sts	0x0124, r24	; 0x800124 <sec>
+		min = I2C_ReadByte();							// Здесь адрес проинкрементился и теперь равен 1, там минуты
+ 68c:	0e 94 53 05 	call	0xaa6	; 0xaa6 <I2C_ReadByte>
+ 690:	80 93 22 01 	sts	0x0122, r24	; 0x800122 <min>
+		hour = I2C_ReadByte();							// Часы
+ 694:	0e 94 53 05 	call	0xaa6	; 0xaa6 <I2C_ReadByte>
+ 698:	80 93 21 01 	sts	0x0121, r24	; 0x800121 <hour>
+		days = I2C_ReadByte();							// День недели
+ 69c:	0e 94 53 05 	call	0xaa6	; 0xaa6 <I2C_ReadByte>
+ 6a0:	80 93 1f 01 	sts	0x011F, r24	; 0x80011f <days>
+		date = I2C_ReadByte();							// Дата
+ 6a4:	0e 94 53 05 	call	0xaa6	; 0xaa6 <I2C_ReadByte>
+ 6a8:	80 93 25 01 	sts	0x0125, r24	; 0x800125 <date>
+		month = I2C_ReadByte();							// Месяц
+ 6ac:	0e 94 53 05 	call	0xaa6	; 0xaa6 <I2C_ReadByte>
+ 6b0:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <month>
+		year = I2C_ReadLastByte();						// Год
+ 6b4:	0e 94 5e 05 	call	0xabc	; 0xabc <I2C_ReadLastByte>
+ 6b8:	80 93 23 01 	sts	0x0123, r24	; 0x800123 <year>
+		I2C_StopCondition();							// Условие стоп
+ 6bc:	0e 94 32 05 	call	0xa64	; 0xa64 <I2C_StopCondition>
+//===================================================================================================================
+		if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажака
+ 6c0:	4d 99       	sbic	0x09, 5	; 9
+ 6c2:	0a c0       	rjmp	.+20     	; 0x6d8 <main+0x92>
+		{
+			if (Clock_Mode == Clock_Mode_common)
+ 6c4:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 6c8:	81 11       	cpse	r24, r1
+ 6ca:	06 c0       	rjmp	.+12     	; 0x6d8 <main+0x92>
+			{
+				Clock_Mode = Clock_Mode_hour;		// Перейдем в режим перевода часов
+ 6cc:	c0 93 1e 01 	sts	0x011E, r28	; 0x80011e <Clock_Mode>
+				blinkstate = 0;						// Сбросим счетчик мегания
+ 6d0:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+				First_button_state = 1;				// Кнопка один нажата
+ 6d4:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+			}
+		}
+//===================================================================================================================
+		LCD_set_pos(4,0);                            // Перемещаем указатель на середину первой строки
+ 6d8:	60 e0       	ldi	r22, 0x00	; 0
+ 6da:	84 e0       	ldi	r24, 0x04	; 4
+ 6dc:	0e 94 22 01 	call	0x244	; 0x244 <LCD_set_pos>
+//===================================================================================================================
+		if (Clock_Mode != Clock_Mode_hour)           // Если мы не находимся в режиме изменения часов
+ 6e0:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 6e4:	81 30       	cpi	r24, 0x01	; 1
+ 6e6:	29 f0       	breq	.+10     	; 0x6f2 <main+0xac>
+		{
+			LCD_send_BCD(hour);						// То просто выводим часы
+ 6e8:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <hour>
+ 6ec:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+ 6f0:	30 c0       	rjmp	.+96     	; 0x752 <main+0x10c>
+		}	
+		else										// Если нет, то...
+		{
+			if (blinkstate == 0)					// Если флаг blinkstate  в нуле
+ 6f2:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 6f6:	81 11       	cpse	r24, r1
+ 6f8:	09 c0       	rjmp	.+18     	; 0x70c <main+0xc6>
+			{
+				LCD_send_char(' ');					// Выводим пустые символы
+ 6fa:	80 e2       	ldi	r24, 0x20	; 32
+ 6fc:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');					
+ 700:	80 e2       	ldi	r24, 0x20	; 32
+ 702:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				blinkstate = 1;						// И выставляем флаг в 1
+ 706:	c0 93 1c 01 	sts	0x011C, r28	; 0x80011c <__data_end>
+ 70a:	06 c0       	rjmp	.+12     	; 0x718 <main+0xd2>
+			} 
+			else
+			{
+				LCD_send_BCD(hour);					// А если флаг был в единице, то выводим часы
+ 70c:	80 91 21 01 	lds	r24, 0x0121	; 0x800121 <hour>
+ 710:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+				blinkstate = 0;						// И сбрасываем флаг
+ 714:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+ 718:	4d 99       	sbic	0x09, 5	; 9
+ 71a:	09 c0       	rjmp	.+18     	; 0x72e <main+0xe8>
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перейти в режим перевода минут
+ 71c:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <First_button_state>
+ 720:	81 11       	cpse	r24, r1
+ 722:	05 c0       	rjmp	.+10     	; 0x72e <main+0xe8>
+				{
+					Clock_Mode = Clock_Mode_min;	// Режим перевода минут
+ 724:	f0 92 1e 01 	sts	0x011E, r15	; 0x80011e <Clock_Mode>
+					First_button_state = 1;			// Поставим опять флаг состояния первой кнопки в единицу
+ 728:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+ 72c:	06 c0       	rjmp	.+12     	; 0x73a <main+0xf4>
+				}
+			}
+			if (Clock_Mode == Clock_Mode_hour) First_button_state = 0;					// Сбросим статус первой кнопки
+ 72e:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 732:	81 30       	cpi	r24, 0x01	; 1
+ 734:	11 f4       	brne	.+4      	; 0x73a <main+0xf4>
+ 736:	10 92 1d 01 	sts	0x011D, r1	; 0x80011d <First_button_state>
+			if(!(PIN(Button_PORT) & (1 << Second_Button_PIN))) Modify_Value_of_RTC(1,0); //  Кнопка 2 нажата
+ 73a:	4e 99       	sbic	0x09, 6	; 9
+ 73c:	04 c0       	rjmp	.+8      	; 0x746 <main+0x100>
+ 73e:	60 e0       	ldi	r22, 0x00	; 0
+ 740:	8c 2f       	mov	r24, r28
+ 742:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+			if(!(PIN(Button_PORT) & (1 << Third_Button_PIN))) Modify_Value_of_RTC(1,1); //  Кнопка 3 нажата
+ 746:	4f 99       	sbic	0x09, 7	; 9
+ 748:	04 c0       	rjmp	.+8      	; 0x752 <main+0x10c>
+ 74a:	6c 2f       	mov	r22, r28
+ 74c:	8c 2f       	mov	r24, r28
+ 74e:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+		}
+//===================================================================================================================		
+		LCD_send_char(':');				// Разделим часы и минуты
+ 752:	8a e3       	ldi	r24, 0x3A	; 58
+ 754:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+//===================================================================================================================		
+		if (Clock_Mode != Clock_Mode_min)           // Если мы не находимся в режиме изменения минут
+ 758:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 75c:	82 30       	cpi	r24, 0x02	; 2
+ 75e:	29 f0       	breq	.+10     	; 0x76a <main+0x124>
+		{
+			LCD_send_BCD(min);						// То просто выводим минуты
+ 760:	80 91 22 01 	lds	r24, 0x0122	; 0x800122 <min>
+ 764:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+ 768:	30 c0       	rjmp	.+96     	; 0x7ca <main+0x184>
+		}
+		else										// Если нет, то...
+		{
+			if (blinkstate == 0)					// Если флаг blinkstate  в нуле
+ 76a:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 76e:	81 11       	cpse	r24, r1
+ 770:	09 c0       	rjmp	.+18     	; 0x784 <main+0x13e>
+			{
+				LCD_send_char(' ');					// Выводим пустые символы
+ 772:	80 e2       	ldi	r24, 0x20	; 32
+ 774:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 778:	80 e2       	ldi	r24, 0x20	; 32
+ 77a:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				blinkstate = 1;						// И выставляем флаг в 1
+ 77e:	c0 93 1c 01 	sts	0x011C, r28	; 0x80011c <__data_end>
+ 782:	06 c0       	rjmp	.+12     	; 0x790 <main+0x14a>
+			}
+			else
+			{
+				LCD_send_BCD(min);					// А если флаг был в единице, то выводим минуты
+ 784:	80 91 22 01 	lds	r24, 0x0122	; 0x800122 <min>
+ 788:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+				blinkstate = 0;						// И сбрасываем флаг
+ 78c:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+ 790:	4d 99       	sbic	0x09, 5	; 9
+ 792:	09 c0       	rjmp	.+18     	; 0x7a6 <main+0x160>
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода секунд
+ 794:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <First_button_state>
+ 798:	81 11       	cpse	r24, r1
+ 79a:	05 c0       	rjmp	.+10     	; 0x7a6 <main+0x160>
+				{
+					Clock_Mode = Clock_Mode_sec;	// Режим перевода секунд
+ 79c:	00 93 1e 01 	sts	0x011E, r16	; 0x80011e <Clock_Mode>
+					First_button_state = 1;
+ 7a0:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+ 7a4:	06 c0       	rjmp	.+12     	; 0x7b2 <main+0x16c>
+				}
+			}
+			if (Clock_Mode == Clock_Mode_min) First_button_state = 0; //Сбросим статус
+ 7a6:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 7aa:	82 30       	cpi	r24, 0x02	; 2
+ 7ac:	11 f4       	brne	.+4      	; 0x7b2 <main+0x16c>
+ 7ae:	10 92 1d 01 	sts	0x011D, r1	; 0x80011d <First_button_state>
+			if(!(PIN(Button_PORT) & (1 << Second_Button_PIN))) Modify_Value_of_RTC(2,0); //  Кнопка 2 нажата
+ 7b2:	4e 99       	sbic	0x09, 6	; 9
+ 7b4:	04 c0       	rjmp	.+8      	; 0x7be <main+0x178>
+ 7b6:	60 e0       	ldi	r22, 0x00	; 0
+ 7b8:	8f 2d       	mov	r24, r15
+ 7ba:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+			if(!(PIN(Button_PORT) & (1 << Third_Button_PIN))) Modify_Value_of_RTC(2,1); //  Кнопка 3 нажата
+ 7be:	4f 99       	sbic	0x09, 7	; 9
+ 7c0:	04 c0       	rjmp	.+8      	; 0x7ca <main+0x184>
+ 7c2:	6c 2f       	mov	r22, r28
+ 7c4:	8f 2d       	mov	r24, r15
+ 7c6:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+		}
+//===================================================================================================================
+		LCD_send_char(':');				// Разделим минуты и секунды
+ 7ca:	8a e3       	ldi	r24, 0x3A	; 58
+ 7cc:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+//===================================================================================================================
+		if (Clock_Mode != Clock_Mode_sec)           // Если мы не находимся в режиме изменения секунд
+ 7d0:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 7d4:	83 30       	cpi	r24, 0x03	; 3
+ 7d6:	29 f0       	breq	.+10     	; 0x7e2 <main+0x19c>
+		{
+			LCD_send_BCD(sec);						// То просто выводим секунды
+ 7d8:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <sec>
+ 7dc:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+ 7e0:	31 c0       	rjmp	.+98     	; 0x844 <main+0x1fe>
+		}
+		else										// Если нет, то...
+		{
+			if (blinkstate == 0)					// Если флаг blinkstate  в нуле
+ 7e2:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 7e6:	81 11       	cpse	r24, r1
+ 7e8:	09 c0       	rjmp	.+18     	; 0x7fc <main+0x1b6>
+			{
+				LCD_send_char(' ');					// Выводим пустые символы
+ 7ea:	80 e2       	ldi	r24, 0x20	; 32
+ 7ec:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 7f0:	80 e2       	ldi	r24, 0x20	; 32
+ 7f2:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				blinkstate = 1;						// И выставляем флаг в 1
+ 7f6:	c0 93 1c 01 	sts	0x011C, r28	; 0x80011c <__data_end>
+ 7fa:	06 c0       	rjmp	.+12     	; 0x808 <main+0x1c2>
+			}
+			else
+			{
+				LCD_send_BCD(sec);					// А если флаг был в единице, то выводим секунды
+ 7fc:	80 91 24 01 	lds	r24, 0x0124	; 0x800124 <sec>
+ 800:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+				blinkstate = 0;						// И сбрасываем флаг
+ 804:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+ 808:	4d 99       	sbic	0x09, 5	; 9
+ 80a:	0a c0       	rjmp	.+20     	; 0x820 <main+0x1da>
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода дня недели
+ 80c:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <First_button_state>
+ 810:	81 11       	cpse	r24, r1
+ 812:	06 c0       	rjmp	.+12     	; 0x820 <main+0x1da>
+				{
+					Clock_Mode = Clock_Mode_day;	// Режим перевода дня недели
+ 814:	84 e0       	ldi	r24, 0x04	; 4
+ 816:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <Clock_Mode>
+					First_button_state = 1;
+ 81a:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+ 81e:	06 c0       	rjmp	.+12     	; 0x82c <main+0x1e6>
+				}
+			}
+			if (Clock_Mode == Clock_Mode_sec) First_button_state = 0; //Сбросим статус
+ 820:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 824:	83 30       	cpi	r24, 0x03	; 3
+ 826:	11 f4       	brne	.+4      	; 0x82c <main+0x1e6>
+ 828:	10 92 1d 01 	sts	0x011D, r1	; 0x80011d <First_button_state>
+			if(!(PIN(Button_PORT) & (1 << Second_Button_PIN))) Modify_Value_of_RTC(3,0); //  Кнопка 2 нажата
+ 82c:	4e 99       	sbic	0x09, 6	; 9
+ 82e:	04 c0       	rjmp	.+8      	; 0x838 <main+0x1f2>
+ 830:	60 e0       	ldi	r22, 0x00	; 0
+ 832:	80 2f       	mov	r24, r16
+ 834:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+			if(!(PIN(Button_PORT) & (1 << Third_Button_PIN))) Modify_Value_of_RTC(3,1); //  Кнопка 3 нажата
+ 838:	4f 99       	sbic	0x09, 7	; 9
+ 83a:	04 c0       	rjmp	.+8      	; 0x844 <main+0x1fe>
+ 83c:	6c 2f       	mov	r22, r28
+ 83e:	80 2f       	mov	r24, r16
+ 840:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+		}
+//===================================================================================================================
+		LCD_set_pos(0,1);			// Переходм на начало второй строки дисплея
+ 844:	6c 2f       	mov	r22, r28
+ 846:	80 e0       	ldi	r24, 0x00	; 0
+ 848:	0e 94 22 01 	call	0x244	; 0x244 <LCD_set_pos>
+//===================================================================================================================
+		if (Clock_Mode != Clock_Mode_day)           // Если мы не находимся в режиме изменения дня недели
+ 84c:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 850:	84 30       	cpi	r24, 0x04	; 4
+ 852:	29 f0       	breq	.+10     	; 0x85e <main+0x218>
+		{
+			LCD_Show_day(days);						// То просто выводим день недели
+ 854:	80 91 1f 01 	lds	r24, 0x011F	; 0x80011f <days>
+ 858:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_Show_day>
+ 85c:	33 c0       	rjmp	.+102    	; 0x8c4 <main+0x27e>
+		}
+		else										// Если нет, то...
+		{
+			if (blinkstate == 0)					// Если флаг blinkstate  в нуле
+ 85e:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 862:	81 11       	cpse	r24, r1
+ 864:	0c c0       	rjmp	.+24     	; 0x87e <main+0x238>
+			{
+				LCD_send_char(' ');					// Выводим пустые символы
+ 866:	80 e2       	ldi	r24, 0x20	; 32
+ 868:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 86c:	80 e2       	ldi	r24, 0x20	; 32
+ 86e:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 872:	80 e2       	ldi	r24, 0x20	; 32
+ 874:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				blinkstate = 1;						// И выставляем флаг в 1
+ 878:	c0 93 1c 01 	sts	0x011C, r28	; 0x80011c <__data_end>
+ 87c:	06 c0       	rjmp	.+12     	; 0x88a <main+0x244>
+			}
+			else
+			{
+				LCD_Show_day(days);					// А если флаг был в единице, то выводим день недели
+ 87e:	80 91 1f 01 	lds	r24, 0x011F	; 0x80011f <days>
+ 882:	0e 94 2c 01 	call	0x258	; 0x258 <LCD_Show_day>
+				blinkstate = 0;						// И сбрасываем флаг
+ 886:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+ 88a:	4d 99       	sbic	0x09, 5	; 9
+ 88c:	09 c0       	rjmp	.+18     	; 0x8a0 <main+0x25a>
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода даты
+ 88e:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <First_button_state>
+ 892:	81 11       	cpse	r24, r1
+ 894:	05 c0       	rjmp	.+10     	; 0x8a0 <main+0x25a>
+				{
+					Clock_Mode = Clock_Mode_date;	// Режим перевода даты
+ 896:	10 93 1e 01 	sts	0x011E, r17	; 0x80011e <Clock_Mode>
+					First_button_state = 1;
+ 89a:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+ 89e:	06 c0       	rjmp	.+12     	; 0x8ac <main+0x266>
+				}
+			}
+			if (Clock_Mode == Clock_Mode_day) First_button_state = 0; //Сбросим статус
+ 8a0:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 8a4:	84 30       	cpi	r24, 0x04	; 4
+ 8a6:	11 f4       	brne	.+4      	; 0x8ac <main+0x266>
+ 8a8:	10 92 1d 01 	sts	0x011D, r1	; 0x80011d <First_button_state>
+			if(!(PIN(Button_PORT) & (1 << Second_Button_PIN))) Modify_Value_of_RTC(4,0); //  Кнопка 2 нажата
+ 8ac:	4e 99       	sbic	0x09, 6	; 9
+ 8ae:	04 c0       	rjmp	.+8      	; 0x8b8 <main+0x272>
+ 8b0:	60 e0       	ldi	r22, 0x00	; 0
+ 8b2:	84 e0       	ldi	r24, 0x04	; 4
+ 8b4:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+			if(!(PIN(Button_PORT) & (1 << Third_Button_PIN))) Modify_Value_of_RTC(4,1); //  Кнопка 3 нажата
+ 8b8:	4f 99       	sbic	0x09, 7	; 9
+ 8ba:	04 c0       	rjmp	.+8      	; 0x8c4 <main+0x27e>
+ 8bc:	6c 2f       	mov	r22, r28
+ 8be:	84 e0       	ldi	r24, 0x04	; 4
+ 8c0:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+		}
+//===================================================================================================================
+		LCD_set_pos(6,1);			// Переходим на шестой символ второй строки
+ 8c4:	6c 2f       	mov	r22, r28
+ 8c6:	86 e0       	ldi	r24, 0x06	; 6
+ 8c8:	0e 94 22 01 	call	0x244	; 0x244 <LCD_set_pos>
+//===================================================================================================================
+		if (Clock_Mode != Clock_Mode_date)           // Если мы не находимся в режиме изменения даты
+ 8cc:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 8d0:	85 30       	cpi	r24, 0x05	; 5
+ 8d2:	29 f0       	breq	.+10     	; 0x8de <main+0x298>
+		{
+			LCD_send_BCD(date);						// То просто выводим дату
+ 8d4:	80 91 25 01 	lds	r24, 0x0125	; 0x800125 <date>
+ 8d8:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+ 8dc:	31 c0       	rjmp	.+98     	; 0x940 <__stack+0x41>
+		}
+		else										// Если нет, то...
+		{
+			if (blinkstate == 0)					// Если флаг blinkstate  в нуле
+ 8de:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 8e2:	81 11       	cpse	r24, r1
+ 8e4:	09 c0       	rjmp	.+18     	; 0x8f8 <main+0x2b2>
+			{
+				LCD_send_char(' ');					// Выводим пустые символы
+ 8e6:	80 e2       	ldi	r24, 0x20	; 32
+ 8e8:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 8ec:	80 e2       	ldi	r24, 0x20	; 32
+ 8ee:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				blinkstate = 1;						// И выставляем флаг в 1
+ 8f2:	c0 93 1c 01 	sts	0x011C, r28	; 0x80011c <__data_end>
+ 8f6:	06 c0       	rjmp	.+12     	; 0x904 <__stack+0x5>
+			}
+			else
+			{
+				LCD_send_BCD(date);					// А если флаг был в единице, то выводим дату
+ 8f8:	80 91 25 01 	lds	r24, 0x0125	; 0x800125 <date>
+ 8fc:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+				blinkstate = 0;						// И сбрасываем флаг
+ 900:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+ 904:	4d 99       	sbic	0x09, 5	; 9
+ 906:	0a c0       	rjmp	.+20     	; 0x91c <__stack+0x1d>
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода месяцев
+ 908:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <First_button_state>
+ 90c:	81 11       	cpse	r24, r1
+ 90e:	06 c0       	rjmp	.+12     	; 0x91c <__stack+0x1d>
+				{
+					Clock_Mode = Clock_Mode_month;	// Режим перевода месяцев
+ 910:	86 e0       	ldi	r24, 0x06	; 6
+ 912:	80 93 1e 01 	sts	0x011E, r24	; 0x80011e <Clock_Mode>
+					First_button_state = 1;
+ 916:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+ 91a:	06 c0       	rjmp	.+12     	; 0x928 <__stack+0x29>
+				}
+			}
+			if (Clock_Mode == Clock_Mode_date) First_button_state = 0; //Сбросим статус
+ 91c:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 920:	85 30       	cpi	r24, 0x05	; 5
+ 922:	11 f4       	brne	.+4      	; 0x928 <__stack+0x29>
+ 924:	10 92 1d 01 	sts	0x011D, r1	; 0x80011d <First_button_state>
+			if(!(PIN(Button_PORT) & (1 << Second_Button_PIN))) Modify_Value_of_RTC(5,0); //  Кнопка 2 нажата
+ 928:	4e 99       	sbic	0x09, 6	; 9
+ 92a:	04 c0       	rjmp	.+8      	; 0x934 <__stack+0x35>
+ 92c:	60 e0       	ldi	r22, 0x00	; 0
+ 92e:	81 2f       	mov	r24, r17
+ 930:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+			if(!(PIN(Button_PORT) & (1 << Third_Button_PIN))) Modify_Value_of_RTC(5,1); //  Кнопка 3 нажата
+ 934:	4f 99       	sbic	0x09, 7	; 9
+ 936:	04 c0       	rjmp	.+8      	; 0x940 <__stack+0x41>
+ 938:	6c 2f       	mov	r22, r28
+ 93a:	81 2f       	mov	r24, r17
+ 93c:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+		}
+//===================================================================================================================
+		LCD_send_char('.');			// Разделим дату и месяц точкой
+ 940:	8e e2       	ldi	r24, 0x2E	; 46
+ 942:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+//===================================================================================================================
+		if (Clock_Mode != Clock_Mode_month)           // Если мы не находимся в режиме изменения месяца
+ 946:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 94a:	86 30       	cpi	r24, 0x06	; 6
+ 94c:	29 f0       	breq	.+10     	; 0x958 <__stack+0x59>
+		{
+			LCD_send_BCD(month);						// То просто выводим месяц
+ 94e:	80 91 20 01 	lds	r24, 0x0120	; 0x800120 <month>
+ 952:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+ 956:	30 c0       	rjmp	.+96     	; 0x9b8 <__stack+0xb9>
+		}
+		else										// Если нет, то...
+		{
+			if (blinkstate == 0)					// Если флаг blinkstate  в нуле
+ 958:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 95c:	81 11       	cpse	r24, r1
+ 95e:	09 c0       	rjmp	.+18     	; 0x972 <__stack+0x73>
+			{
+				LCD_send_char(' ');					// Выводим пустые символы
+ 960:	80 e2       	ldi	r24, 0x20	; 32
+ 962:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 966:	80 e2       	ldi	r24, 0x20	; 32
+ 968:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				blinkstate = 1;						// И выставляем флаг в 1
+ 96c:	c0 93 1c 01 	sts	0x011C, r28	; 0x80011c <__data_end>
+ 970:	06 c0       	rjmp	.+12     	; 0x97e <__stack+0x7f>
+			}
+			else
+			{
+				LCD_send_BCD(month);					// А если флаг был в единице, то выводим месяц
+ 972:	80 91 20 01 	lds	r24, 0x0120	; 0x800120 <month>
+ 976:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+				blinkstate = 0;						// И сбрасываем флаг
+ 97a:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+ 97e:	4d 99       	sbic	0x09, 5	; 9
+ 980:	09 c0       	rjmp	.+18     	; 0x994 <__stack+0x95>
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в режим перевода года
+ 982:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <First_button_state>
+ 986:	81 11       	cpse	r24, r1
+ 988:	05 c0       	rjmp	.+10     	; 0x994 <__stack+0x95>
+				{
+					Clock_Mode = Clock_Mode_year;	// Режим перевода года
+ 98a:	d0 93 1e 01 	sts	0x011E, r29	; 0x80011e <Clock_Mode>
+					First_button_state = 1;
+ 98e:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+ 992:	06 c0       	rjmp	.+12     	; 0x9a0 <__stack+0xa1>
+				}
+			}
+			if (Clock_Mode == Clock_Mode_month) First_button_state = 0; //Сбросим статус
+ 994:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 998:	86 30       	cpi	r24, 0x06	; 6
+ 99a:	11 f4       	brne	.+4      	; 0x9a0 <__stack+0xa1>
+ 99c:	10 92 1d 01 	sts	0x011D, r1	; 0x80011d <First_button_state>
+			if(!(PIN(Button_PORT) & (1 << Second_Button_PIN))) Modify_Value_of_RTC(6,0); //  Кнопка 2 нажата
+ 9a0:	4e 99       	sbic	0x09, 6	; 9
+ 9a2:	04 c0       	rjmp	.+8      	; 0x9ac <__stack+0xad>
+ 9a4:	60 e0       	ldi	r22, 0x00	; 0
+ 9a6:	86 e0       	ldi	r24, 0x06	; 6
+ 9a8:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+			if(!(PIN(Button_PORT) & (1 << Third_Button_PIN))) Modify_Value_of_RTC(6,1); //  Кнопка 3 нажата
+ 9ac:	4f 99       	sbic	0x09, 7	; 9
+ 9ae:	04 c0       	rjmp	.+8      	; 0x9b8 <__stack+0xb9>
+ 9b0:	6c 2f       	mov	r22, r28
+ 9b2:	86 e0       	ldi	r24, 0x06	; 6
+ 9b4:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+		}
+//===================================================================================================================
+		LCD_send_char('.');		// Разделим месяц и год точкой
+ 9b8:	8e e2       	ldi	r24, 0x2E	; 46
+ 9ba:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+//===================================================================================================================
+		if (Clock_Mode != Clock_Mode_year)           // Если мы не находимся в режиме изменения года
+ 9be:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ 9c2:	87 30       	cpi	r24, 0x07	; 7
+ 9c4:	41 f0       	breq	.+16     	; 0x9d6 <__stack+0xd7>
+		{
+			LCD_send_BCD(0b00100000);						// То выводим 20 и
+ 9c6:	80 e2       	ldi	r24, 0x20	; 32
+ 9c8:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+			LCD_send_BCD(year);						// год
+ 9cc:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <year>
+ 9d0:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+ 9d4:	45 ce       	rjmp	.-886    	; 0x660 <main+0x1a>
+		}
+		else										// Если нет, то...
+		{
+			if (blinkstate == 0)					// Если флаг blinkstate  в нуле
+ 9d6:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <__data_end>
+ 9da:	81 11       	cpse	r24, r1
+ 9dc:	0f c0       	rjmp	.+30     	; 0x9fc <__stack+0xfd>
+			{
+				LCD_send_char(' ');					// Выводим пустые символы
+ 9de:	80 e2       	ldi	r24, 0x20	; 32
+ 9e0:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 9e4:	80 e2       	ldi	r24, 0x20	; 32
+ 9e6:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 9ea:	80 e2       	ldi	r24, 0x20	; 32
+ 9ec:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				LCD_send_char(' ');
+ 9f0:	80 e2       	ldi	r24, 0x20	; 32
+ 9f2:	0e 94 b8 00 	call	0x170	; 0x170 <LCD_send_char>
+				blinkstate = 1;						// И выставляем флаг в 1
+ 9f6:	c0 93 1c 01 	sts	0x011C, r28	; 0x80011c <__data_end>
+ 9fa:	09 c0       	rjmp	.+18     	; 0xa0e <__stack+0x10f>
+			}
+			else
+			{
+				LCD_send_BCD(0b00100000);					// А если флаг был в единице, то выводим 20 и
+ 9fc:	80 e2       	ldi	r24, 0x20	; 32
+ 9fe:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+				LCD_send_BCD(year);							// год
+ a02:	80 91 23 01 	lds	r24, 0x0123	; 0x800123 <year>
+ a06:	0e 94 59 01 	call	0x2b2	; 0x2b2 <LCD_send_BCD>
+				blinkstate = 0;
+ a0a:	10 92 1c 01 	sts	0x011C, r1	; 0x80011c <__data_end>
+			}
+			if(!(PIN(Button_PORT) & (1 << First_Button_PIN))) // Кнопка 1 нажата
+ a0e:	4d 99       	sbic	0x09, 5	; 9
+ a10:	09 c0       	rjmp	.+18     	; 0xa24 <__stack+0x125>
+			{
+				if (First_button_state == 0) // Опросим статус, чтобы сразу не перйти в общий режим
+ a12:	80 91 1d 01 	lds	r24, 0x011D	; 0x80011d <First_button_state>
+ a16:	81 11       	cpse	r24, r1
+ a18:	05 c0       	rjmp	.+10     	; 0xa24 <__stack+0x125>
+				{
+					Clock_Mode = Clock_Mode_common;	// Общий режим
+ a1a:	10 92 1e 01 	sts	0x011E, r1	; 0x80011e <Clock_Mode>
+					First_button_state = 1;
+ a1e:	c0 93 1d 01 	sts	0x011D, r28	; 0x80011d <First_button_state>
+ a22:	06 c0       	rjmp	.+12     	; 0xa30 <__stack+0x131>
+				}
+			}
+			if (Clock_Mode == Clock_Mode_year) First_button_state = 0; //Сбросим статус
+ a24:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <Clock_Mode>
+ a28:	87 30       	cpi	r24, 0x07	; 7
+ a2a:	11 f4       	brne	.+4      	; 0xa30 <__stack+0x131>
+ a2c:	10 92 1d 01 	sts	0x011D, r1	; 0x80011d <First_button_state>
+			if(!(PIN(Button_PORT) & (1 << Second_Button_PIN))) Modify_Value_of_RTC(7,0); //  Кнопка 2 нажата
+ a30:	4e 99       	sbic	0x09, 6	; 9
+ a32:	04 c0       	rjmp	.+8      	; 0xa3c <__stack+0x13d>
+ a34:	60 e0       	ldi	r22, 0x00	; 0
+ a36:	8d 2f       	mov	r24, r29
+ a38:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+			if(!(PIN(Button_PORT) & (1 << Third_Button_PIN))) Modify_Value_of_RTC(7,1); //  Кнопка 3 нажата
+ a3c:	4f 99       	sbic	0x09, 7	; 9
+ a3e:	10 ce       	rjmp	.-992    	; 0x660 <main+0x1a>
+ a40:	6c 2f       	mov	r22, r28
+ a42:	8d 2f       	mov	r24, r29
+ a44:	0e 94 6e 01 	call	0x2dc	; 0x2dc <Modify_Value_of_RTC>
+ a48:	0b ce       	rjmp	.-1002   	; 0x660 <main+0x1a>
+
+00000a4a <I2C_Init>:
+
+#include "TWI.h"
+//=============================================================================================
+void I2C_Init(void)
+{
+	TWBR = 32; // скорость передачи (при 16мГц получается 100кГц)
+ a4a:	80 e2       	ldi	r24, 0x20	; 32
+ a4c:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__TEXT_REGION_LENGTH__+0x7e00b8>
+ a50:	08 95       	ret
+
+00000a52 <I2C_StartCondition>:
+}
+//=============================================================================================
+void I2C_StartCondition(void)
+{
+	TWCR = (1<<TWINT)|(1<<TWSTA)|(1<<TWEN);		// Передаем условие стоп
+ a52:	84 ea       	ldi	r24, 0xA4	; 164
+ a54:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+	while(!(TWCR & (1<<TWINT))); // Подождем пока установится TWIN
+ a58:	ec eb       	ldi	r30, 0xBC	; 188
+ a5a:	f0 e0       	ldi	r31, 0x00	; 0
+ a5c:	80 81       	ld	r24, Z
+ a5e:	88 23       	and	r24, r24
+ a60:	ec f7       	brge	.-6      	; 0xa5c <I2C_StartCondition+0xa>
+}
+ a62:	08 95       	ret
+
+00000a64 <I2C_StopCondition>:
+//=============================================================================================
+void I2C_StopCondition(void)
+{
+	TWCR = (1<<TWINT)|(1<<TWSTO)|(1<<TWEN);		// Передаем условие старт
+ a64:	84 e9       	ldi	r24, 0x94	; 148
+ a66:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ a6a:	08 95       	ret
+
+00000a6c <I2C_SendByte>:
+}
+//=============================================================================================
+void I2C_SendByte(unsigned char data)
+{
+	TWDR = data; // Запишем байт в регистр данных
+ a6c:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+	TWCR = (1 << TWINT)|(1 << TWEN); // Включаем передачу байта
+ a70:	84 e8       	ldi	r24, 0x84	; 132
+ a72:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+	while (!(TWCR & (1<<TWINT))); // Подождем пока установится TWIN
+ a76:	ec eb       	ldi	r30, 0xBC	; 188
+ a78:	f0 e0       	ldi	r31, 0x00	; 0
+ a7a:	80 81       	ld	r24, Z
+ a7c:	88 23       	and	r24, r24
+ a7e:	ec f7       	brge	.-6      	; 0xa7a <I2C_SendByte+0xe>
+/*	USART_Transmit(TWSR);*/
+}
+ a80:	08 95       	ret
+
+00000a82 <I2C_SendByteByAddr>:
+//=============================================================================================
+void I2C_SendByteByAddr(unsigned char data, unsigned char addr)
+{
+ a82:	cf 93       	push	r28
+ a84:	df 93       	push	r29
+ a86:	c8 2f       	mov	r28, r24
+ a88:	d6 2f       	mov	r29, r22
+	I2C_StartCondition();		// Передаем условие старт
+ a8a:	0e 94 29 05 	call	0xa52	; 0xa52 <I2C_StartCondition>
+	I2C_SendByte(addr);			// Передаем адрес устройства, к которому обращаемся
+ a8e:	8d 2f       	mov	r24, r29
+ a90:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+	I2C_SendByte(data);			// Передаем данные
+ a94:	8c 2f       	mov	r24, r28
+ a96:	0e 94 36 05 	call	0xa6c	; 0xa6c <I2C_SendByte>
+	while(!(TWCR & (1<<TWINT))); // Подождем пока установится TWIN
+}
+//=============================================================================================
+void I2C_StopCondition(void)
+{
+	TWCR = (1<<TWINT)|(1<<TWSTO)|(1<<TWEN);		// Передаем условие старт
+ a9a:	84 e9       	ldi	r24, 0x94	; 148
+ a9c:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+{
+	I2C_StartCondition();		// Передаем условие старт
+	I2C_SendByte(addr);			// Передаем адрес устройства, к которому обращаемся
+	I2C_SendByte(data);			// Передаем данные
+	I2C_StopCondition();		// Передаем условие стоп
+}
+ aa0:	df 91       	pop	r29
+ aa2:	cf 91       	pop	r28
+ aa4:	08 95       	ret
+
+00000aa6 <I2C_ReadByte>:
+//=============================================================================================
+unsigned char I2C_ReadByte(void)
+{
+	TWCR = (1<<TWINT)|(1<<TWEN)|(1<<TWEA); // Включим прием данных
+ aa6:	84 ec       	ldi	r24, 0xC4	; 196
+ aa8:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+	while (!(TWCR & (1<<TWINT)));  // Подождем пока установится TWIN
+ aac:	ec eb       	ldi	r30, 0xBC	; 188
+ aae:	f0 e0       	ldi	r31, 0x00	; 0
+ ab0:	80 81       	ld	r24, Z
+ ab2:	88 23       	and	r24, r24
+ ab4:	ec f7       	brge	.-6      	; 0xab0 <I2C_ReadByte+0xa>
+	return TWDR;
+ ab6:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+}
+ aba:	08 95       	ret
+
+00000abc <I2C_ReadLastByte>:
+//=============================================================================================
+unsigned char I2C_ReadLastByte(void)
+{
+	TWCR = (1<<TWINT)|(1<<TWEN); // Включим прием данных
+ abc:	84 e8       	ldi	r24, 0x84	; 132
+ abe:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+	while (!(TWCR & (1<<TWINT))); // Подождем пока установится TWIN
+ ac2:	ec eb       	ldi	r30, 0xBC	; 188
+ ac4:	f0 e0       	ldi	r31, 0x00	; 0
+ ac6:	80 81       	ld	r24, Z
+ ac8:	88 23       	and	r24, r24
+ aca:	ec f7       	brge	.-6      	; 0xac6 <I2C_ReadLastByte+0xa>
+	return TWDR;
+ acc:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ ad0:	08 95       	ret
+
+00000ad2 <__tablejump2__>:
+ ad2:	ee 0f       	add	r30, r30
+ ad4:	ff 1f       	adc	r31, r31
+ ad6:	05 90       	lpm	r0, Z+
+ ad8:	f4 91       	lpm	r31, Z
+ ada:	e0 2d       	mov	r30, r0
+ adc:	09 94       	ijmp
+
+00000ade <_exit>:
+ ade:	f8 94       	cli
+
+00000ae0 <__stop_program>:
+ ae0:	ff cf       	rjmp	.-2      	; 0xae0 <__stop_program>
